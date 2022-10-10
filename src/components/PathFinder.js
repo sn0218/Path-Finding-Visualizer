@@ -5,12 +5,13 @@ import Astar from '../graphSearchAlgo/Astar';
 import BFS from '../graphSearchAlgo/bfs';
 import DFS from '../graphSearchAlgo/dfs';
 
-const cols = 15;
+// Global variables
+const cols = 30;
 const rows = 15;
-let startRow = 12;
-let startCol = 2;
-let endRow = 2;
-let endCol = 13;
+let startRow = 11;
+let startCol = 4;
+let endRow = 4;
+let endCol = 26;
 
 const PathFinder = () => {
   const [grid, setGrid] = useState([]);
@@ -124,7 +125,7 @@ const PathFinder = () => {
           // set the visited nodes with new className
           document.querySelector(`#node-${node.x}-${node.y}`).className =
             'node node-shortest-path';
-        }, 50 * i);
+        }, 100 * i);
       }
     } else {
       console.log('No path!');
@@ -158,8 +159,23 @@ const PathFinder = () => {
   };
 
   const selectAlgo = (e) => {
-    const startNode = grid[startRow][startCol];
-    const endNode = grid[endRow][endCol];
+    /* const startNode = grid[startRow][startCol];
+    const endNode = grid[endRow][endCol]; */
+
+    // find the startNode and endNode from the grid
+    let startNode;
+    let endNode;
+    for (let i = 0; i < rows; i++) {
+      for (let j = 0; j < cols; j++) {
+        let node = grid[i][j];
+        if (node.isStart) {
+          startNode = node;
+        }
+        if (node.isEnd) {
+          endNode = node;
+        }
+      }
+    }
 
     // clear the previous algo visualization
     let newGrid = [...grid];
@@ -231,10 +247,10 @@ const PathFinder = () => {
       </button>
       <button onClick={createWall}>Generate wall</button>
       <button onClick={resetGrid}>Reset</button>
-      <div className="grid">
+      <div id="grid" className="grid">
         {grid.map((row, rowId) => {
           return (
-            <div key={rowId} className="row">
+            <div key={rowId} id={`row-${rowId}`} className="row">
               {row.map((col, colId) => {
                 const { isStart, isEnd, isWall } = col;
                 return (
@@ -245,6 +261,8 @@ const PathFinder = () => {
                     isWall={isWall}
                     row={rowId}
                     col={colId}
+                    grid={grid}
+                    setGrid={setGrid}
                   />
                 );
               })}

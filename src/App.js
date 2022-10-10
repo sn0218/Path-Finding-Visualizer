@@ -4,7 +4,7 @@ import PathFinder from './components/PathFinder';
 function App() {
   return (
     <div className="App">
-      <h1>Path Finder Visualizer</h1>
+      <h1>Path Search Visualizer</h1>
       <PathFinder />
     </div>
   );
