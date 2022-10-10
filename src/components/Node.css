@@ -1,0 +1,29 @@
+.node {
+    width: 40px;
+    height: 40px;
+    border: 1px;
+    border-color: gray;
+    border-style: solid;
+    margin: 1px;
+
+}
+
+.node-start {
+    background-color: paleturquoise;
+}
+
+.node-end {
+    background-color: red;
+}
+
+.node-wall {
+    background-color: #313131;
+}
+
+.node-shortest-path {
+    background-color: antiquewhite;
+}
+
+.node-visited {
+    background-color: rgb(128, 166, 197);
+}
