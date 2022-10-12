@@ -1,7 +1,7 @@
-# Getting Started with Create React App
+# PathFinding Visualizer
 ![CPT2210130004-900x647](https://user-images.githubusercontent.com/48129546/195392852-60c72115-546e-4954-a67c-06247f9a348f.gif)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This app is created to visualize path searching algorithms.
 
 ## Available Scripts
 
