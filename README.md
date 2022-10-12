@@ -3,6 +3,7 @@
 
 ## Description
 This app is created to visualize path searching algorithms including A* search, Breadth-first search and depth-first search.
+Live demo: https://sn0218.github.io/Path-Finding-Visualizer/
 
 ## Features
 - Visualize the search algorithms by animation.
