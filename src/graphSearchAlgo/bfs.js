@@ -26,6 +26,7 @@ const bfs = (start, end) => {
       console.log('path is found!');
       console.log(pathNodes);
       console.log(visited);
+
       return { pathNodes, visited };
     }
 

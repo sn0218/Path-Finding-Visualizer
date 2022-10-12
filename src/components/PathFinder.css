@@ -5,3 +5,40 @@
     justify-content: center;
    
 }
+
+.btn {
+    background-color: rgba(34, 34, 34, 0.815);
+    color: rgb(248, 244, 244);
+}
+
+.btn:hover {
+    color: rgb(248, 244, 244);
+}
+
+.buttons {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    justify-content: space-evenly;
+    align-content: space-between;
+    margin: 20px;
+}
+
+
+#algo-button {
+    margin: 10px;
+}
+
+#wall-button {
+    margin: 10px;
+}
+
+#reset-button {
+    margin: 10px;
+}
+
+
+.visualizer {
+    margin-bottom: 80px;
+}

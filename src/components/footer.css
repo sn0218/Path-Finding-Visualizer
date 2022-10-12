@@ -1,0 +1,10 @@
+footer {
+    border-top: 1px solid rgba(0, 0, 0, 0.10);;
+    padding-top: 30px;
+    padding-bottom: 20px;
+    font-size: 14px;
+}
+
+footer h6,p{
+    color: rgba(0, 0, 0, 0.65)
+}

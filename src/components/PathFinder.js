@@ -4,6 +4,7 @@ import './PathFinder.css';
 import Astar from '../graphSearchAlgo/Astar';
 import BFS from '../graphSearchAlgo/bfs';
 import DFS from '../graphSearchAlgo/dfs';
+import Dijkstra from '../graphSearchAlgo/dijkstra';
 
 // Global variables
 const cols = 30;
@@ -205,6 +206,9 @@ const PathFinder = () => {
       case 'Astar':
         newRes = Astar(startNode, endNode);
         break;
+      case 'djikstra':
+        newRes = Dijkstra(startNode, endNode);
+        break;
       default:
         console.log('No algorithm is chosen!');
     }
@@ -235,18 +239,59 @@ const PathFinder = () => {
   };
 
   return (
-    <div className="visualizer">
-      <button onClick={selectAlgo} value="Astar">
-        Visualize A* search
-      </button>
-      <button onClick={selectAlgo} value="BFS">
-        Visualize BFS
-      </button>
-      <button onClick={selectAlgo} value="DFS">
-        Visualize DFS
-      </button>
-      <button onClick={createWall}>Generate wall</button>
-      <button onClick={resetGrid}>Reset</button>
+    <div className="container visualizer">
+      <div className="buttons">
+        <div id="algo-button" class="dropdown">
+          <button
+            class="btn dropdown-toggle"
+            type="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            Visualize Algorithm
+          </button>
+          <ul class="dropdown-menu">
+            <li>
+              <button
+                class="dropdown-item"
+                type="button"
+                onClick={selectAlgo}
+                value="Astar"
+              >
+                A* search
+              </button>
+            </li>
+            <li>
+              <button
+                class="dropdown-item"
+                type="button"
+                onClick={selectAlgo}
+                value="BFS"
+              >
+                Breadth-First Search
+              </button>
+            </li>
+            <li>
+              <button
+                class="dropdown-item"
+                type="button"
+                onClick={selectAlgo}
+                value="DFS"
+              >
+                Depth-First Search
+              </button>
+            </li>
+          </ul>
+        </div>
+
+        <button type="button" id="wall-button" class="btn" onClick={createWall}>
+          Generate random wall nodes
+        </button>
+        <button type="button" id="reset-button" class="btn" onClick={resetGrid}>
+          Reset the grid
+        </button>
+      </div>
+
       <div id="grid" className="grid">
         {grid.map((row, rowId) => {
           return (
