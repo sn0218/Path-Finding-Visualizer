@@ -6,6 +6,8 @@ This app is created to visualize path searching algorithms including A* search, 
 
 ## Getting Started
 
+First, clone or download the repository from github.
+
 In the project directory, you can run:
 
 ```
