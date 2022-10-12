@@ -2,7 +2,8 @@
 ![CPT2210130004-900x647](https://user-images.githubusercontent.com/48129546/195392852-60c72115-546e-4954-a67c-06247f9a348f.gif)
 
 ## Description
-This app is created to visualize path searching algorithms including A* search, Breadth-first search and depth-first search. 
+This app is created to visualize path searching algorithms including A* search, Breadth-first search and depth-first search.  
+
 Live demo: https://sn0218.github.io/Path-Finding-Visualizer/
 
 ## Features
