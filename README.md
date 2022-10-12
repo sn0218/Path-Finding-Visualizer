@@ -1,7 +1,8 @@
 # PathFinding Visualizer
 ![CPT2210130004-900x647](https://user-images.githubusercontent.com/48129546/195392852-60c72115-546e-4954-a67c-06247f9a348f.gif)
 
-This app is created to visualize path searching algorithms.
+## Description
+This app is created to visualize path searching algorithms including A* search, Breadth-first search and depth-first search.
 
 ## Getting Started
 
@@ -26,4 +27,9 @@ It correctly bundles React in production mode and optimizes the build for the be
 
 The build is minified and the filenames include the hashes.\
 Your app is ready to be deployed!
+
+## Tech Stack
+- JavaScript
+- React
+- HTML5/CSS3
 
